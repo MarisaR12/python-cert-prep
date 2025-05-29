@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  height: 300vh; 
+  background: linear-gradient(
+    to bottom,
+    #670D2F 0vh,
+    #670D2F 100vh,
+    #f8e2e2 100vh,
+    #f8e2e2 300vh
+  );
+}
+.square {
+  position: relative; /* so the h1 can be absolutely positioned inside */
+  margin-top: 2%;
+  margin-left: -210px;
+  margin-right: 200px;
+  padding-top: 65%;
+  padding-left: 75%;
+  padding-right: 75%;
+  height: 100px;
+  width: 50px; /* <-- fix: '50' is invalid, must be in px */
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.heading {
+  position: absolute;
+  top: 10px;  /* adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 50px;
+  font-weight: bold;
+  font-family: "Cherry Bomb One", system-ui;
+  text-align: center;
+  margin: 0;
+  letter-spacing: 0.2cm;
+  color: #A53860
+
+}
+
+.vl {
+  border-left: 3px solid black;
+  height: 310px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 32%;
+}
+
+.cherry-bomb-one-regular {
+  font-family: "Cherry Bomb One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.domain-heading{
+  font-family: "Cherry Bomb One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  text-align: center;
+  letter-spacing: 0.2cm;
+  color: #A53860
+}
+
+.domain{
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  text-align: left;
+  color: #000000
+}
+
+.jost{
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.description{
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  text-align: left;
+  color:#A53860;
+}
+
+#box{
+  width: 500px;
+  background-color: #A53860;
+  border-radius: 20px;
+  border: 2px solid #A53860;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 10px;
+  position: relative;
+  left: 10%; 
+}
+
+#box:hover .description{
+  color: white;
+  font-size: 18px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+#box:hover{
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.about{
+  font-family: "Jost", sans-serif;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 25px;
+}
