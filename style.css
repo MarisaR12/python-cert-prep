@@ -1,12 +1,12 @@
 body {
   margin: 0;
-  height: 300vh; 
+  height: 200vh; 
   background: linear-gradient(
     to bottom,
     #670D2F 0vh,
     #670D2F 100vh,
     #f8e2e2 100vh,
-    #f8e2e2 300vh
+    #f8e2e2 200vh
   );
 }
 .square {
@@ -60,7 +60,8 @@ body {
   font-size: 50px;
   text-align: center;
   letter-spacing: 0.2cm;
-  color: #A53860
+  color: #A53860;
+  margin-top:20%;
 }
 
 .domain{
@@ -98,7 +99,7 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin: 10px;
   position: relative;
-  left: 10%; 
+  left: 20%; 
 }
 
 #box:hover .description{
