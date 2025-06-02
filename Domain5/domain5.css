@@ -1,0 +1,119 @@
+/*menu*/
+.overlay {
+  height: 100%;
+  width: 0%;
+  position: fixed; 
+  z-index: 1; 
+  right: 0;
+  top: 0;
+  background-color: #ffe5ef;
+  overflow-x: hidden; 
+  transition: 0.5s;  
+  box-shadow: 0 4px 8px rgb(148, 148, 148, 0.6);
+
+}
+
+.overlay-content {
+  position: relative;
+  top: 7%;   
+  width: 100%;    
+  text-align: right;  
+  margin-top: 5px;   
+  font-family: "Jost", sans-serif;
+}
+
+.jost{
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 27px;
+  color: #A53860;
+  display: block;  
+  transition: 0.3s; 
+}
+
+.overlay a:hover{
+  color: #f1f1f1;
+  background-color: #A53860;
+
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 5px;
+  left: 20px;
+  font-size: 35px;
+  color: #A53860;
+}
+.overlay .closebtn:hover{
+  color: #A53860;
+  background-color: #ffe5ef;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+.openbtn{
+  font-size: 20px;
+  cursor: pointer;
+  color: black;
+  padding: 10px 15px;
+  border: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+}
+
+.openbtn.hidden {
+  display: none; 
+}
+
+body{
+  background-color: #f8e2e2;
+}
+
+.lesson-heading{
+  font-family: "Cherry Bomb One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2em;
+  text-align: left;
+  letter-spacing: 0.2cm;
+  color: #A53860;
+}
+
+.zain-bold {
+  font-family: "Zain", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.subheading{
+  font-family: "Zain", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2em;
+  text-align: left;
+  color: #A53860;
+}
+
+#text{
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2em;
+  text-align: left;
+  color: #000000;
+}
