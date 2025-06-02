@@ -1,152 +1,205 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Domain 2: Flow Control with Decisions and Loops</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Domain 2: Flow Control with Decisions and Loops</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="domain1.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zain:wght@700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body>
+  <div id="myNav" class="overlay">
 
-<!-- Fixed top navigation bar -->
-<nav class="bg-blue-700 text-white fixed w-full z-10 top-0 shadow">
-    <div class="max-w-4xl mx-auto px-4">
-        <div class="flex justify-between items-center py-4">
-            <div class="text-lg font-bold">Python Workbook</div>
-            <div>
-                <a href="#lesson1" class="px-4">Lesson 1</a>
-                <a href="#lesson2" class="px-4">Lesson 2</a>
-                <a href="#lesson3" class="px-4">Lesson 3</a>
-                <a href="#lesson4" class="px-4">Lesson 4</a>
-                <a href="#lesson5" class="px-4">Lesson 5</a>
-                <a href="#lesson6" class="px-4">Lesson 6</a>
-            </div>
-        </div>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+    <div class="overlay-content">
+      <a href="../index.html">Home</a>
+        <a href="#lesson1" >Lesson 1</a>
+        <a href="#lesson2" >Lesson 2</a>
+        <a href="#lesson3" >Lesson 3</a>
+        <a href="#lesson4" >Lesson 4</a>
+        <a href="#lesson5" >Lesson 5</a>
+        <a href="#lesson6" >Lesson 6</a>
     </div>
-</nav>
 
-<!-- Main content -->
-<div class="pt-16 max-w-4xl mx-auto px-4">
+  </div>
 
-    <!-- Lesson 1: if/elif/else -->
-    <section id="lesson1" class="py-10 border-b border-gray-300">
-        <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-2xl font-bold text-blue-700 mb-4">Lesson 1: Branching with <code>if</code>, <code>elif</code>, and <code>else</code> 🌿</h2>
-            <p class="mb-2"><strong>Learning Target:</strong> I can use <code>if</code>, <code>elif</code>, and <code>else</code> statements to make decisions in Python.</p>
-            <pre class="bg-gray-100 p-4 rounded"><code>score = 85
+  <span onclick="openNav()" class="openbtn">&#9776;</span>
+  <main class="max-w-4xl mx-auto p-6 space-y-10">
 
-if score >= 90:
-    print("Grade: A")
-elif score >= 80:
-    print("Grade: B")
-else:
-    print("Grade: C or below")</code></pre>
-            <h3 class="text-lg font-semibold mt-6 mb-2 text-green-700">Your Turn!</h3>
-            <p>Write a program that asks the user for their score and prints their grade using <code>if</code>, <code>elif</code>, and <code>else</code>.</p>
-            <div class="bg-white border border-gray-300 rounded p-4">
-                <p class="mb-2 font-semibold">Try it here:</p>
-                <!-- Replace with your actual Trinket embed link -->
-                <iframe src="https://py3.codeskulptor.org/#user310_eqU6FgSQhM_0.py" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-    </section>
+<!-- LESSON 1 -->
+      <section id="lesson1" class="bg-white p-6 rounded-xl shadow-lg mb-10">
+          <div class="max-w-4xl mx-auto px-4">
+              <h2 class="lesson-heading">Lesson 1: Branching with <code>if</code>, <code>elif</code>, and <code>else</code></h2>
 
-    <!-- Lesson 2: Nested and Compound Conditions -->
-    <section id="lesson2" class="py-10 border-b border-gray-300">
-        <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-2xl font-bold text-blue-700 mb-4">Lesson 2: Nested and Compound Conditions 🔄</h2>
-            <p class="mb-2"><strong>Learning Target:</strong> I can use nested and compound conditions to make complex decisions in Python.</p>
-            <pre class="bg-gray-100 p-4 rounded"><code>coins = 5
-level = 3
+              <div class="bg-indigo-50 p-4 rounded-md mb-4">
+                  <h3 class="subheading"> Learning Target</h3>
+                  <p>I can use <code>if</code>, <code>elif</code>, and <code>else</code> statements to make decisions in Python.</p>
+                </div>
 
-if coins > 0 and level >= 3:
-    print("You can unlock the bonus round!")</code></pre>
-            <h3 class="text-lg font-semibold mt-6 mb-2 text-green-700">Your Turn!</h3>
-            <p>Write a program that checks if a user has enough coins and is at a high enough level to unlock a bonus round.</p>
-            <div class="bg-white border border-gray-300 rounded p-4">
-                <p class="mb-2 font-semibold">Try it here:</p>
-                <!-- Replace with your actual Trinket embed link -->
-                <iframe src="https://py3.codeskulptor.org/#user310_zVx0NV7wnV_0.py" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-    </section>
+              <pre class="bg-gray-100 p-4 rounded"><code>score = 85
 
-    <!-- Lesson 3: while loop -->
-    <section id="lesson3" class="py-10 border-b border-gray-300">
-        <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-2xl font-bold text-blue-700 mb-4">Lesson 3: Using a <code>while</code> Loop 🔁</h2>
-            <p class="mb-2"><strong>Learning Target:</strong> I can use a <code>while</code> loop to repeat actions in Python.</p>
-            <pre class="bg-gray-100 p-4 rounded"><code>points = 0
+      if score >= 90:
+      print("Grade: A")
+      elif score >= 80:
+      print("Grade: B")
+      else:
+      print("Grade: C or below")</code></pre>
+              <br>
+              <h3 class="subheading">Your Turn!</h3>
+              <p id="text">Write a program that asks the user for their score and prints their grade using <code>if</code>, <code>elif</code>, and <code>else</code>.</p>
+              <div class="bg-white border border-gray-300 rounded p-4">
+                  <p class="mb-2 font-semibold">Try it here:</p>
+                  <!-- Replace with your actual Trinket embed link -->
+                  <iframe src="https://py3.codeskulptor.org/#user310_eqU6FgSQhM_0.py" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
+              </div>
+          </div>
+      </section>
 
-while points < 10:
-    print("Keep going!")
-    points += 2</code></pre>
-            <h3 class="text-lg font-semibold mt-6 mb-2 text-green-700">Your Turn!</h3>
-            <p>Write a program that uses a <code>while</code> loop to count from 0 to 10, printing a message each time.</p>
-            <div class="bg-white border border-gray-300 rounded p-4">
-                <p class="mb-2 font-semibold">Try it here:</p>
-                <!-- Replace with your actual Trinket embed link -->
-                <iframe src="https://py3.codeskulptor.org/#user310_OqRIK6YpbG_0.py" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-    </section>
+      <!-- Lesson 2: Nested and Compound Conditions -->
+      <section id="lesson2" class="bg-white p-6 rounded-xl shadow-lg mb-10">
+          <div class="max-w-4xl mx-auto px-4">
+              <h2 class="lesson-heading">Lesson 2: Nested and Compound Conditions </h2>
 
-    <!-- Lesson 4: for loop -->
-    <section id="lesson4" class="py-10 border-b border-gray-300">
-        <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-2xl font-bold text-blue-700 mb-4">Lesson 4: Using a <code>for</code> Loop 🔄</h2>
-            <p class="mb-2"><strong>Learning Target:</strong> I can use a <code>for</code> loop to repeat actions in Python.</p>
-            <pre class="bg-gray-100 p-4 rounded"><code>for i in range(1, 6):
-    print("Level", i)</code></pre>
-            <h3 class="text-lg font-semibold mt-6 mb-2 text-green-700">Your Turn!</h3>
-            <p>Write a program that uses a <code>for</code> loop to print the levels from 1 to 5.</p>
-            <div class="bg-white border border-gray-300 rounded p-4">
-                <p class="mb-2 font-semibold">Try it here:</p>
-                <!-- Replace with your actual Trinket embed link -->
-                <iframe src="https://py3.codeskulptor.org/#user310_G8brPVRXTz_0.py" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-    </section>
+              <div class="bg-indigo-50 p-4 rounded-md mb-4">
+                <h3 class="subheading"> Learning Target</h3>
+                <p> I can use nested and compound conditions to make complex decisions in Python.</p>
+              </div>
 
-    <!-- Lesson 5: break, continue, pass -->
-    <section id="lesson5" class="py-10 border-b border-gray-300">
-        <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-2xl font-bold text-blue-700 mb-4">Lesson 5: Loop Control: <code>break</code>, <code>continue</code>, <code>pass</code> ⏭️</h2>
-            <p class="mb-2"><strong>Learning Target:</strong> I can use <code>break</code>, <code>continue</code>, and <code>pass</code> to control loops in Python.</p>
-            <pre class="bg-gray-100 p-4 rounded"><code>for coin in ["Gold", "Silver", "Platinum"]:
-    if coin == "Platinum":
-        continue
-    print("You have a", coin)</code></pre>
-            <h3 class="text-lg font-semibold mt-6 mb-2 text-green-700">Your Turn!</h3>
-            <p>Write a program that uses <code>break</code>, <code>continue</code>, and <code>pass</code> to control the flow of a loop.</p>
-            <div class="bg-white border border-gray-300 rounded p-4">
-                <p class="mb-2 font-semibold">Try it here:</p>
-                <!-- Replace with your actual Trinket embed link -->
-                <iframe src="https://py3.codeskulptor.org/#user310_G8brPVRXTz_1.py" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-    </section>
+              <pre class="bg-gray-100 p-4 rounded"><code>coins = 5
+      level = 3
 
-    <!-- Lesson 6: Nested Loops -->
-    <section id="lesson6" class="py-10 border-b border-gray-300">
-        <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-2xl font-bold text-blue-700 mb-4">Lesson 6: Nested Loops 🔄🔄</h2>
-            <p class="mb-2"><strong>Learning Target:</strong> I can use nested loops to perform repeated actions in Python.</p>
-            <pre class="bg-gray-100 p-4 rounded"><code>for level in range(1, 4):
-    for item in ["Sword", "Shield"]:
-        print(f"Level {level}: {item}")</code></pre>
-            <h3 class="text-lg font-semibold mt-6 mb-2 text-green-700">Your Turn!</h3>
-            <p>Write a program that uses nested loops to print items for each level.</p>
-            <div class="bg-white border border-gray-300 rounded p-4">
-                <p class="mb-2 font-semibold">Try it here:</p>
-                <!-- Replace with your actual Trinket embed link -->
-                <iframe src="https://py3.codeskulptor.org/#user310_IW9zJKfbO9PPJ87_1.py" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-    </section>
+      if coins > 0 and level >= 3:
+      print("You can unlock the bonus round!")</code></pre>
+              <h3 class="subheading">Your Turn!</h3>
+              <p id="text">Write a program that checks if a user has enough coins and is at a high enough level to unlock a bonus round.</p>
+              <div class="bg-white border border-gray-300 rounded p-4">
+                  <p id="text">Try it here:</p>
+                  <!-- Replace with your actual Trinket embed link -->
+                  <iframe src="https://py3.codeskulptor.org/#user310_zVx0NV7wnV_0.py" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
+              </div>
+          </div>
+      </section>
 
-</div>
+      <!-- Lesson 3: while loop -->
+      <section id="lesson3" class="bg-white p-6 rounded-xl shadow-lg mb-10">
+          <div class="max-w-4xl mx-auto px-4">
+              <h2 class="lesson-heading">Lesson 3: Using a <code>while</code> Loop 🔁</h2>
 
+               <div class="bg-indigo-50 p-4 rounded-md mb-4">
+                  <h3 class="subheading"> Learning Target</h3>
+                  <p>I can use a <code>while</code> loop to repeat actions in Python.</p>
+                </div>
+              <pre class="bg-gray-100 p-4 rounded"><code>points = 0
+
+      while points < 10:
+      print("Keep going!")
+      points += 2</code></pre>
+              <h3 class="subheading">Your Turn!</h3>
+              <p id="text">Write a program that uses a <code>while</code> loop to count from 0 to 10, printing a message each time.</p>
+              <div class="bg-white border border-gray-300 rounded p-4">
+                  <p id="text">Try it here:</p>
+                  <!-- Replace with your actual Trinket embed link -->
+                  <iframe src="https://py3.codeskulptor.org/#user310_OqRIK6YpbG_0.py" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
+              </div>
+          </div>
+      </section>
+
+      <!-- Lesson 4: for loop -->
+      <section id="lesson4" class="bg-white p-6 rounded-xl shadow-lg mb-10">
+          <div class="max-w-4xl mx-auto px-4">
+              <h2 class="lesson-heading">Lesson 4: Using a <code>for</code> Loop </h2>
+
+               <div class="bg-indigo-50 p-4 rounded-md mb-4">
+                  <h3 class="subheading"> Learning Target</h3>
+                  <p id="text">I can use the I can use a <code>for</code> loop to repeat actions in Python.</p>
+                </div>
+
+
+              
+              <pre class="bg-gray-100 p-4 rounded"><code>for i in range(1, 6):
+      print("Level", i)</code></pre>
+              <h3 class="subheading">Your Turn!</h3>
+              <p id="text">Write a program that uses a <code>for</code> loop to print the levels from 1 to 5.</p>
+              <div class="bg-white border border-gray-300 rounded p-4">
+                  <p id="text">Try it here:</p>
+                  <!-- Replace with your actual Trinket embed link -->
+                  <iframe src="https://py3.codeskulptor.org/#user310_G8brPVRXTz_0.py" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
+              </div>
+          </div>
+      </section>
+
+      <!-- Lesson 5: break, continue, pass -->
+      <section id="lesson5" class="bg-white p-6 rounded-xl shadow-lg mb-10">
+          <div class="max-w-4xl mx-auto px-4">
+              <h2 class="lesson-heading">Lesson 5: Loop Control: <code>break</code>, <code>continue</code>, <code>pass</code> </h2>
+      
+              <div class="bg-indigo-50 p-4 rounded-md mb-4">
+                  <h3 class="subheading">Learning Target</h3>
+                  <p id="text">I can use <code>break</code>, <code>continue</code>, and <code>pass</code> to control loops in Python.</p>
+                </div>
+
+
+              
+              <pre class="bg-gray-100 p-4 rounded"><code>for coin in ["Gold", "Silver", "Platinum"]:
+      if coin == "Platinum":
+          continue
+      print("You have a", coin)</code></pre>
+              <h3 class="subheading">Your Turn!</h3>
+              <p id="text">Write a program that uses <code>break</code>, <code>continue</code>, and <code>pass</code> to control the flow of a loop.</p>
+              <div class="bg-white border border-gray-300 rounded p-4">
+                  <p id="text">Try it here:</p>
+                  <!-- Replace with your actual Trinket embed link -->
+                  <iframe src="https://py3.codeskulptor.org/#user310_G8brPVRXTz_1.py" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
+              </div>
+          </div>
+      </section>
+
+      <!-- Lesson 6: Nested Loops -->
+      <section id="lesson6" class="bg-white p-6 rounded-xl shadow-lg mb-10">
+          <div class="max-w-4xl mx-auto px-4">
+              <h2 class="lesson-heading">Lesson 6: Nested Loops </h2>
+
+
+              <div class="bg-indigo-50 p-4 rounded-md mb-4">
+                  <h3 class="subheading">Learning Target</h3>
+                  <p id="text">I can use nested loops to perform repeated actions in Python.</p>
+                </div>
+
+              <pre class="bg-gray-100 p-4 rounded"><code>for level in range(1, 4):
+      for item in ["Sword", "Shield"]:
+          print(f"Level {level}: {item}")</code></pre>
+              <h3 class="subheading">Your Turn!</h3>
+              <p id="text">Write a program that uses nested loops to print items for each level.</p>
+              <div class="bg-white border border-gray-300 rounded p-4">
+                  <p id="text">Try it here:</p>
+                  <!-- Replace with your actual Trinket embed link -->
+                  <iframe src="https://py3.codeskulptor.org/#user310_IW9zJKfbO9PPJ87_1.py" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
+              </div>
+          </div>
+      </section>
+
+      </div>
+  </main>
+    
+  <script>
+    function openNav() {
+    document.getElementById("myNav").style.width = "250px";
+      document.querySelector(".openbtn").classList.add("hidden");
+    }
+    function closeNav() {
+    document.getElementById("myNav").style.width = "0";
+      document.querySelector(".openbtn").classList.remove("hidden");
+    }
+  </script>
 </body>
 </html>
